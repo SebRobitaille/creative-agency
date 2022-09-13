@@ -1,0 +1,401 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Custom styles
+
+$ff-ph: "Montserrat", sans-serif;
+$ff-sh: "Vollkorn", serif;
+$ff-p: "Source Sans Pro", sans-serif;
+
+// Utility classes
+
+.primary-header {
+  font-family: $ff-ph;
+  font-weight: 700;
+  letter-spacing: -3px;
+  font-size: 42px;
+}
+
+.secondary-header {
+  font-family: $ff-sh;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.button {
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: -1px;
+  margin-top: 30px;
+  padding: 15px 30px;
+  transition: all 500ms ease;
+  cursor: pointer;
+  font-family: $ff-ph;
+  text-transform: uppercase;
+  &:hover {
+    border-color: #878787;
+    background-color: #878787;
+    color: white;
+  }
+}
+
+// General styles
+
+body {
+  width: 100%;
+  background-color: white;
+}
+
+p {
+  font-family: $ff-p;
+  font-size: 15px;
+  letter-spacing: -0.5px;
+  line-height: 22px;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  .header-container {
+    height: 90vh;
+    width: 100%;
+    background: url(../images/hero-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0px;
+    .logo-div {
+      padding-left: 50px;
+    }
+    .header-text {
+      color: white;
+      display: flex;
+      height: 5rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: right;
+      align-self: center;
+      top: 50%;
+      right: 0%;
+      margin-top: 7.5rem;
+      margin-right: 9.5rem;
+      h1 {
+        font-size: 3.5rem;
+        display: block;
+        text-align: right;
+        font-weight: 700;
+        line-height: 4.25rem;
+        letter-spacing: -3px;
+        margin-block-end: 10px;
+        margin-block-start: 20px;
+        margin-bottom: 10px;
+      }
+      h4 {
+        font-size: 1.1rem;
+        text-align: right;
+        font-weight: 400;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  color: white;
+  position: absolute;
+  left: 70px;
+  top: 40px;
+  aspect-ratio: 1 / 1;
+}
+
+nav {
+  height: 60px;
+}
+
+.nav-list {
+  position: absolute;
+  display: block;
+  height: 5rem;
+  top: 30px;
+  margin-left: 8.5rem;
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: $ff-ph;
+    font-size: 13px;
+    margin: 10px 20px;
+    text-transform: uppercase;
+    float: left;
+    &:hover {
+      color: #e3e3e3;
+    }
+  }
+}
+
+// about section
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 20px;
+  gap: 20px;
+  .about-left-one {
+    background-image: url(../images/about-left.jpeg);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 600px;
+    padding: 0 100px;
+  }
+  .about-right-one {
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 20px;
+    min-height: 600px;
+    height: 600px;
+    padding: 0 100px;
+    h2 {
+      margin: 5px auto;
+      font-size: 42px;
+      line-height: 40px;
+    }
+    h5 {
+      line-height: 22px;
+      margin: 5px 0 30px;
+      font-size: 16px;
+    }
+  }
+  .about-left-two {
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 20px;
+    min-height: 600px;
+    height: 600px;
+    padding: 0 100px;
+    h2 {
+      margin: 5px auto;
+      font-size: 42px;
+      line-height: 40px;
+    }
+    h5 {
+      line-height: 22px;
+      margin: 5px 0 30px;
+      font-size: 16px;
+      font-style: italic;
+    }
+  }
+  .about-right-two {
+    height: 600px;
+    min-height: 600px;
+    background-image: url(../images/about-right.jpeg);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 600px;
+    padding: 0 100px;
+  }
+  .about-span-two {
+    grid-column: 1 / span 2;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 20px;
+    height: 200px;
+    .item {
+      padding: 0 20px;
+      float: left;
+      line-height: 10px;
+    }
+    h2 {
+      font-size: 42px;
+    }
+    h5 {
+      font-size: 16px;
+      font-style: italic;
+    }
+  }
+}
+
+// Services section
+
+.services-section {
+  text-align: center;
+  .two-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px;
+    .services-left {
+      background-image: url(../images/services-left.jpeg);
+      height: 600px;
+      min-height: 600px;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    .services-right {
+      background-color: whitesmoke;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      line-height: 20px;
+      min-height: 600px;
+      height: 600px;
+      padding: 0 100px;
+      h2 {
+        margin: 5px auto;
+        font-size: 42px;
+        line-height: 40px;
+      }
+      h5 {
+        line-height: 22px;
+        margin: 5px 0 30px;
+        font-size: 16px;
+        font-style: italic;
+      }
+    }
+  }
+  .three-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px;
+    padding-top: 20px;
+    .services-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 400px;
+      min-height: 400px;
+      padding: 40px 50px 0;
+      background-color: whitesmoke;
+      &:first-child:hover {
+        background-color: #e3e1d3;
+        transition: all 0.75s ease;
+        background-size: auto;
+      }
+      &:nth-child(2):hover {
+        background-color: #e0cece;
+        transition: all 0.75s ease;
+        background-size: auto;
+      }
+      &:last-child:hover {
+        background-color: #d1d7e0;
+        transition: all 0.75s ease;
+        background-size: auto;
+      }
+      img {
+        height: 125px;
+        width: 125px;
+        align-self: center;
+      }
+      h2 {
+        font-size: 42px;
+        font-weight: 700px;
+      }
+    }
+  }
+}
+
+// Quotes section
+
+.quotes-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px 20px;
+  h2 {
+    margin: 5px 0;
+    letter-spacing: -3px;
+    line-height: 40px;
+  }
+}
