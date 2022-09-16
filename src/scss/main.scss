@@ -86,6 +86,7 @@ $ff-p: "Source Sans Pro", sans-serif;
   font-weight: 700;
   letter-spacing: -3px;
   font-size: 42px;
+  line-height: 40px;
 }
 
 .secondary-header {
@@ -93,6 +94,7 @@ $ff-p: "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-style: italic;
   font-size: 16px;
+  line-height: 22px;
 }
 
 .button {
@@ -113,6 +115,11 @@ $ff-p: "Source Sans Pro", sans-serif;
     background-color: #878787;
     color: white;
   }
+}
+
+.white {
+  color: white;
+  text-decoration: none;
 }
 
 // General styles
@@ -196,7 +203,8 @@ nav {
   display: block;
   height: 5rem;
   top: 30px;
-  margin-left: 8.5rem;
+  margin-left: 10.5rem;
+  margin-right: 2.5rem;
   a {
     text-decoration: none;
     color: white;
@@ -397,5 +405,115 @@ nav {
     margin: 5px 0;
     letter-spacing: -3px;
     line-height: 40px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
+// Portfolio section
+
+.portfolio-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  padding: 100px 20px;
+  .portfolio-text {
+    margin: 1px;
+  }
+  a {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pf1 {
+    background-image: url(../images/portfolio1.jpg);
+  }
+  .pf2 {
+    background-image: url(../images/portfolio2.jpg);
+  }
+  .pf3 {
+    background-image: url(../images/portfolio3.jpg);
+  }
+  .pf4 {
+    background-image: url(../images/portfolio4.jpg);
+  }
+  .pf5 {
+    background-image: url(../images/portfolio5.jpg);
+  }
+  .pf6 {
+    background-image: url(../images/portfolio6.jpg);
+  }
+  .pf7 {
+    background-image: url(../images/portfolio7.jpg);
+  }
+  .outer-div {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: all 0.5s ease;
+    aspect-ratio: 1 / 1;
+    .inner-div {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        line-height: 22px;
+        letter-spacing: -0.5px;
+        display: none;
+        text-align: center;
+      }
+    }
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.8);
+      display: block;
+      .inner-div {
+        border: 1px solid white;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// Contact section
+
+.contact-section {
+  padding: 100px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  .contact-div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    form {
+      border: 1px solid black;
+      label {
+        text-transform: uppercase;
+        display: block;
+        width: 100%;
+      }
+      input {
+        width: 100%;
+      }
+    }
   }
 }

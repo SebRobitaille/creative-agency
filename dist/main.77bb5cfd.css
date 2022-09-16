@@ -76,6 +76,7 @@ select {
   font-weight: 700;
   letter-spacing: -3px;
   font-size: 42px;
+  line-height: 40px;
 }
 
 .secondary-header {
@@ -83,6 +84,7 @@ select {
   font-weight: 400;
   font-style: italic;
   font-size: 16px;
+  line-height: 22px;
 }
 
 .button {
@@ -103,6 +105,11 @@ select {
   border-color: #878787;
   background-color: #878787;
   color: white;
+}
+
+.white {
+  color: white;
+  text-decoration: none;
 }
 
 body {
@@ -184,7 +191,8 @@ nav {
   display: block;
   height: 5rem;
   top: 30px;
-  margin-left: 8.5rem;
+  margin-left: 10.5rem;
+  margin-right: 2.5rem;
 }
 .nav-list a {
   text-decoration: none;
@@ -380,6 +388,112 @@ nav {
   margin: 5px 0;
   letter-spacing: -3px;
   line-height: 40px;
+}
+.quotes-section p {
+  font-size: 20px;
+}
+
+.portfolio-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  padding: 100px 20px;
+}
+.portfolio-section .portfolio-text {
+  margin: 1px;
+}
+.portfolio-section a {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-section .pf1 {
+  background-image: url(/portfolio1.2afdf596.jpg);
+}
+.portfolio-section .pf2 {
+  background-image: url(/portfolio2.abeacf05.jpg);
+}
+.portfolio-section .pf3 {
+  background-image: url(/portfolio3.7f4d3e4c.jpg);
+}
+.portfolio-section .pf4 {
+  background-image: url(/portfolio4.1cfd72c3.jpg);
+}
+.portfolio-section .pf5 {
+  background-image: url(/portfolio5.50b48501.jpg);
+}
+.portfolio-section .pf6 {
+  background-image: url(/portfolio6.f6bf2acd.jpg);
+}
+.portfolio-section .pf7 {
+  background-image: url(/portfolio7.81a059fe.jpg);
+}
+.portfolio-section .outer-div {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border: 1px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: all 0.5s ease;
+  aspect-ratio: 1/1;
+}
+.portfolio-section .outer-div .inner-div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-section .outer-div .inner-div span {
+  line-height: 22px;
+  letter-spacing: -0.5px;
+  display: none;
+  text-align: center;
+}
+.portfolio-section .outer-div:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: block;
+}
+.portfolio-section .outer-div:hover .inner-div {
+  border: 1px solid white;
+}
+.portfolio-section .outer-div:hover .inner-div span {
+  display: block;
+}
+
+.contact-section {
+  padding: 100px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.contact-section .contact-div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-section .contact-div form {
+  border: 1px solid black;
+}
+.contact-section .contact-div form label {
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+}
+.contact-section .contact-div form input {
+  width: 100%;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
