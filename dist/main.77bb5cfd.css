@@ -138,7 +138,8 @@ header .header-container {
   background-position: 50% 0px;
 }
 header .header-container .logo-div {
-  padding-left: 50px;
+  padding-left: 3.5rem;
+  padding-top: 3.5rem;
 }
 header .header-container .header-text {
   color: white;
@@ -485,15 +486,102 @@ nav {
   flex-direction: column;
 }
 .contact-section .contact-div form {
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .contact-section .contact-div form label {
   text-transform: uppercase;
   display: block;
   width: 100%;
+  font-weight: bold;
+  margin: 5px auto;
+  letter-spacing: -1px;
+  line-height: 20px;
 }
 .contact-section .contact-div form input {
   width: 100%;
+  height: 2.5rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+}
+.contact-section .contact-div form textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  height: auto;
+  color: #555;
+  background-color: #fff;
+  overflow: auto;
+}
+.contact-section .contact-div form .button {
+  width: 20%;
+  margin: 20px auto;
+  text-align: center;
+  padding: 0;
+  border: 2px solid black;
+}
+
+.footer-section {
+  background-color: #242424;
+  margin: 10px;
+  padding: 20px;
+  height: 300px;
+}
+.footer-section .footer-div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: white;
+}
+.footer-section .footer-div h6 {
+  color: #7d7d7d;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+.footer-section .footer-div .col-1 {
+  grid-column: 1;
+}
+.footer-section .footer-div .col-1 img {
+  height: 15%;
+  width: 15%;
+  aspect-ratio: 1/1;
+  margin-top: 3.5rem;
+  margin-left: 3.5rem;
+}
+.footer-section .footer-div .col-2 {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+}
+.footer-section .footer-div .col-2 a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 5px;
+  letter-spacing: -0.5px;
+  line-height: 28px;
+}
+.footer-section .footer-div .col-3 p {
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.footer-section .footer-div .col-4 p {
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
