@@ -121,13 +121,35 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 var backArrow = document.querySelector(".back-arrow");
 var nextArrow = document.querySelector(".next-arrow");
 var slideShowDiv = document.querySelector(".slideshow");
+var slides = document.querySelectorAll(".slide");
+var slide1 = document.querySelector("#slide-1");
+var slide2 = document.querySelector("#slide-2");
+var slide3 = document.querySelector("#slide-3");
 var heroPrimary = document.querySelector(".hero-primary");
 var heroSecondary = document.querySelector(".hero-secondary");
 var slideIndex = 1;
-var imgURL = "../images/hero-2.jpeg";
-nextArrow.addEventListener("click", function () {
-  slideShowDiv.style.backgroundImage = 'url("../images/hero-2.jpeg")';
-});
+
+var nextSlide = function nextSlide() {
+  slides.forEach(function (slide) {
+    slide.classList.remove("active");
+  });
+
+  if (slideIndex < 3) {
+    slideIndex += 1;
+  } else if (slideIndex == 3) {
+    slideIndex = 1;
+  }
+
+  console.log(slideIndex);
+
+  if (slideIndex == 1) {
+    slide1.classList.add("active");
+  } else if (slideIndex == 2) {
+    slide2.classList.add("active");
+  } else if (slideIndex == 3) {
+    slide3.classList.add("active");
+  }
+}; // nextArrow.addEventListener("click", nextSlide());
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -156,7 +178,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52951" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59126" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

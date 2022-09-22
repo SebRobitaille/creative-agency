@@ -117,6 +117,12 @@ $ff-p: "Source Sans Pro", sans-serif;
   }
 }
 
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .white {
   color: white;
   text-decoration: none;
@@ -136,145 +142,147 @@ p {
   line-height: 1.375rem;
 }
 
-header {
-  width: 100%;
-  height: 100%;
-  padding: 1.25rem;
+// primary header
+
+.main-header {
+  margin: 1.5rem 1.5rem;
+  padding: 0 auto;
+  min-height: 100vmin;
+  min-width: 100vmin;
   .header-container {
-    height: 90vh;
-    width: 100%;
-
-    .logo-div {
-      padding-left: 3.5rem;
-      padding-top: 3.5rem;
+    .slideshow {
+      min-height: 100%;
+      min-width: 100%;
+      .active {
+        display: block !important;
+      }
+      .slide {
+        min-height: 750px;
+        background-position: 50% 0px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+      }
+      #slide-1 {
+        display: none;
+        background-image: url(../images/hero-background.jpg);
+        .header-text {
+          position: relative;
+          text-align: right;
+          transform: translateX(-5%) translateY(130%);
+          h1 {
+            font-size: 3.5rem;
+            line-height: 3.4rem;
+          }
+          h4 {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.4rem;
+          }
+        }
+      }
+      #slide-2 {
+        display: none;
+      }
+      #slide-3 {
+        display: none;
+      }
     }
-    .header-text {
-      color: white;
+    .arrow-div {
+      position: absolute;
       display: flex;
-      height: 5rem;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-end;
-      text-align: right;
-      align-self: center;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      width: 95%;
+      margin: 0 auto;
+      padding: 0 auto;
       top: 50%;
-      right: 0%;
-      margin-top: 7.5rem;
-      margin-right: 9.5rem;
-      h1 {
-        font-size: 3.5rem;
-        display: block;
-        text-align: right;
-        font-weight: 700;
-        line-height: 4.25rem;
-        letter-spacing: -3px;
-        margin-block-end: 10px;
-        margin-block-start: 20px;
-        margin-bottom: 10px;
+      left: 0;
+      right: 0;
+      color: white;
+      .back-arrow {
+        margin-left: 0.7rem;
+        @include flex-center;
+        width: 30px;
+        height: 30px;
+        &:hover {
+          background-color: rgba(51, 51, 51, 0.49);
+          cursor: pointer;
+        }
       }
-      h4 {
-        font-size: 1.1rem;
-        text-align: right;
-        font-weight: 400;
-        font-style: italic;
+      .next-arrow {
+        margin-right: 0.7rem;
+        @include flex-center;
+        width: 30px;
+        height: 30px;
+        &:hover {
+          background-color: rgba(51, 51, 51, 0.49);
+          cursor: pointer;
+        }
+      }
+    }
+    .primary-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-flex;
+      margin-top: 3rem;
+      margin-left: 3.5rem;
+      width: 70%;
+      z-index: 100%;
+      .logo-div {
+        aspect-ratio: 1 / 1;
+        max-width: 5rem;
+        max-height: 5rem;
+        margin-right: 2rem;
+      }
+      .nav-list {
+        margin-left: 3rem;
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        .nav-item {
+          text-decoration: none;
+          color: white;
+          text-transform: uppercase;
+          transition: 0.5s all ease;
+          font-family: $ff-ph;
+          font-size: 0.8rem;
+          letter-spacing: -1px;
+          line-height: 14px;
+          display: flex;
+          flex-direction: column;
+          &:hover {
+            color: #e3e3e3;
+            &::after {
+              display: block;
+              transition: all 0.5s ease;
+              transition-delay: 0.5s;
+            }
+          }
+          &::after {
+            content: "";
+            color: white;
+            position: relative;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            margin: 0 auto;
+
+            display: none;
+          }
+        }
       }
     }
   }
 }
-
-.logo {
-  width: 60px;
-  height: 60px;
-  color: white;
-  position: absolute;
-  left: 70px;
-  top: 40px;
-  aspect-ratio: 1 / 1;
-}
-
-nav {
-  height: 60px;
-}
-
-.nav-list {
-  position: absolute;
-  display: block;
-  height: 5rem;
-  top: 30px;
-  margin-left: 10.5rem;
-  margin-right: 2.5rem;
-  a {
-    text-decoration: none;
-    color: white;
-    font-family: $ff-ph;
-    font-size: 13px;
-    margin: 10px 20px;
-    text-transform: uppercase;
-    float: left;
-    &:hover {
-      color: #e3e3e3;
-    }
-  }
-}
-
-.slideshow {
-  background-image: url(../images/hero-background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 0px;
-}
-.back-arrow {
-  max-width: 50px;
-  max-height: 50px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  .md36 {
-    font-size: 36px;
-    font-family: "Material Icons";
-    margin-left: 1rem;
-  }
-  &:hover {
-    cursor: pointer;
-    transition: all 0.4s ease;
-    background-color: rgba(51, 51, 51, 0.49);
-  }
-}
-
-.next-arrow {
-  max-width: 50px;
-  max-height: 50px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  right: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  .md36 {
-    font-size: 36px;
-    font-family: "Material Icons";
-    margin-right: 1rem;
-  }
-  &:hover {
-    cursor: pointer;
-    transition: all 0.4s ease;
-    background-color: rgba(51, 51, 51, 0.49);
-  }
-}
-
 // about section
 
 .about-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0 20px;
+  margin: 1.5rem 1.5rem;
   gap: 20px;
   .about-left-one {
     background-image: url(../images/about-left.jpeg);
