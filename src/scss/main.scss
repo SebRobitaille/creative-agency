@@ -91,27 +91,27 @@ $breakpoint-phone: 43em;
   font-family: $ff-ph;
   font-weight: 700;
   letter-spacing: -3px;
-  font-size: 42px;
-  line-height: 40px;
+  font-size: 2.625rem;
+  line-height: 2.5rem;
 }
 
 .secondary-header {
   font-family: $ff-sh;
   font-weight: 400;
   font-style: italic;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1.375rem;
 }
 
 .button {
   text-decoration: none;
   color: black;
   border: 2px solid black;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-align: center;
   letter-spacing: -1px;
-  margin-top: 30px;
-  padding: 15px 30px;
+  margin-top: 1.875rem;
+  padding: 1rem 2rem;
   transition: all 500ms ease;
   cursor: pointer;
   font-family: $ff-ph;
@@ -137,15 +137,16 @@ body {
 
 p {
   font-family: $ff-p;
-  font-size: 15px;
+  font-size: 0.9375rem;
   letter-spacing: -0.5px;
-  line-height: 22px;
+  line-height: 1.375rem;
 }
 
 // Header and NavBar Section
 
 header {
   width: 100%;
+<<<<<<< HEAD
   .header-container {
     display: flex;
     flex-direction: column;
@@ -167,6 +168,14 @@ header {
       right: 10%;
       color: white;
     }
+=======
+  height: 100%;
+  padding: 1.25rem;
+  .header-container {
+    height: 90vh;
+    width: 100%;
+
+>>>>>>> f79d7b7fec7b46143168014da904d177be0e2c3e
     .logo-div {
       max-width: 5rem;
       aspect-ratio: 1;
@@ -190,6 +199,58 @@ header {
 
 .primary-nav {
   display: none;
+}
+
+.slideshow {
+  background-image: url(../images/hero-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0px;
+}
+.back-arrow {
+  max-width: 50px;
+  max-height: 50px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  .md36 {
+    font-size: 36px;
+    font-family: "Material Icons";
+    margin-left: 1rem;
+  }
+  &:hover {
+    cursor: pointer;
+    transition: all 0.4s ease;
+    background-color: rgba(51, 51, 51, 0.49);
+  }
+}
+
+.next-arrow {
+  max-width: 50px;
+  max-height: 50px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  .md36 {
+    font-size: 36px;
+    font-family: "Material Icons";
+    margin-right: 1rem;
+  }
+  &:hover {
+    cursor: pointer;
+    transition: all 0.4s ease;
+    background-color: rgba(51, 51, 51, 0.49);
+  }
 }
 
 // about section
