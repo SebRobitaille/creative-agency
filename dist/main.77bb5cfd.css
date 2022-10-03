@@ -126,86 +126,48 @@ p {
 
 header {
   width: 100%;
-  height: 100%;
-  padding: 20px;
 }
 header .header-container {
-  height: 90vh;
-  width: 100%;
-  background: url(/hero-background.510a3007.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100%;
+  width: 90%;
+  background-image: url(/hero-background.510a3007.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 0px;
+  margin: 20px;
+  overflow-x: hidden;
+}
+header .header-container #nav-enable {
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  color: white;
 }
 header .header-container .logo-div {
-  padding-left: 3.5rem;
-  padding-top: 3.5rem;
+  max-width: 5rem;
+  aspect-ratio: 1;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  align-self: flex-start;
+  justify-self: flex-start;
 }
 header .header-container .header-text {
   color: white;
-  display: flex;
-  height: 5rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  margin: 1rem;
   text-align: right;
-  align-self: center;
-  top: 50%;
-  right: 0%;
-  margin-top: 7.5rem;
-  margin-right: 9.5rem;
 }
 header .header-container .header-text h1 {
-  font-size: 3.5rem;
-  display: block;
-  text-align: right;
-  font-weight: 700;
-  line-height: 4.25rem;
-  letter-spacing: -3px;
-  margin-block-end: 10px;
-  margin-block-start: 20px;
-  margin-bottom: 10px;
-}
-header .header-container .header-text h4 {
-  font-size: 1.1rem;
-  text-align: right;
-  font-weight: 400;
-  font-style: italic;
+  margin: 1.5rem auto;
 }
 
-.logo {
-  width: 60px;
-  height: 60px;
-  color: white;
-  position: absolute;
-  left: 70px;
-  top: 40px;
-  aspect-ratio: 1/1;
-}
-
-nav {
-  height: 60px;
-}
-
-.nav-list {
-  position: absolute;
-  display: block;
-  height: 5rem;
-  top: 30px;
-  margin-left: 10.5rem;
-  margin-right: 2.5rem;
-}
-.nav-list a {
-  text-decoration: none;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  margin: 10px 20px;
-  text-transform: uppercase;
-  float: left;
-}
-.nav-list a:hover {
-  color: #e3e3e3;
+.primary-nav {
+  display: none;
 }
 
 .about-section {
@@ -214,12 +176,23 @@ nav {
   padding: 0 20px;
   gap: 20px;
 }
+@media screen and (max-width: 900px) {
+  .about-section {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .about-section .about-left-one {
   background-image: url(/about-left.2b540c01.jpeg);
   background-position: 50% 50%;
   background-size: cover;
   height: 600px;
   padding: 0 100px;
+}
+@media only screen and (max-width: 900px) {
+  .about-section .about-left-one {
+    display: none;
+  }
 }
 .about-section .about-right-one {
   background-color: whitesmoke;

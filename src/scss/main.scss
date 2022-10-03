@@ -79,6 +79,12 @@ $ff-ph: "Montserrat", sans-serif;
 $ff-sh: "Vollkorn", serif;
 $ff-p: "Source Sans Pro", sans-serif;
 
+// Media Query Breakpoints
+
+$breakpoint-desktop: 82em;
+$breakpoint-tablet: 62em;
+$breakpoint-phone: 43em;
+
 // Utility classes
 
 .primary-header {
@@ -136,88 +142,54 @@ p {
   line-height: 22px;
 }
 
+// Header and NavBar Section
+
 header {
   width: 100%;
-  height: 100%;
-  padding: 20px;
   .header-container {
-    height: 90vh;
-    width: 100%;
-    background: url(../images/hero-background.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 100%;
+    width: 90%;
+    background-image: url(../images/hero-background.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 0px;
+    margin: 20px;
+    overflow-x: hidden;
+    #nav-enable {
+      display: block;
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      color: white;
+    }
     .logo-div {
-      padding-left: 3.5rem;
-      padding-top: 3.5rem;
+      max-width: 5rem;
+      aspect-ratio: 1;
+      margin-left: 1rem;
+      margin-top: 1rem;
+      align-self: flex-start;
+      justify-self: flex-start;
     }
     .header-text {
       color: white;
-      display: flex;
-      height: 5rem;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-end;
+      margin: 1rem;
       text-align: right;
-      align-self: center;
-      top: 50%;
-      right: 0%;
-      margin-top: 7.5rem;
-      margin-right: 9.5rem;
       h1 {
-        font-size: 3.5rem;
-        display: block;
-        text-align: right;
-        font-weight: 700;
-        line-height: 4.25rem;
-        letter-spacing: -3px;
-        margin-block-end: 10px;
-        margin-block-start: 20px;
-        margin-bottom: 10px;
-      }
-      h4 {
-        font-size: 1.1rem;
-        text-align: right;
-        font-weight: 400;
-        font-style: italic;
+        margin: 1.5rem auto;
       }
     }
   }
 }
 
-.logo {
-  width: 60px;
-  height: 60px;
-  color: white;
-  position: absolute;
-  left: 70px;
-  top: 40px;
-  aspect-ratio: 1 / 1;
-}
+// Nav bar
 
-nav {
-  height: 60px;
-}
-
-.nav-list {
-  position: absolute;
-  display: block;
-  height: 5rem;
-  top: 30px;
-  margin-left: 10.5rem;
-  margin-right: 2.5rem;
-  a {
-    text-decoration: none;
-    color: white;
-    font-family: $ff-ph;
-    font-size: 13px;
-    margin: 10px 20px;
-    text-transform: uppercase;
-    float: left;
-    &:hover {
-      color: #e3e3e3;
-    }
-  }
+.primary-nav {
+  display: none;
 }
 
 // about section
@@ -227,12 +199,19 @@ nav {
   grid-template-columns: 1fr 1fr;
   padding: 0 20px;
   gap: 20px;
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+  }
   .about-left-one {
     background-image: url(../images/about-left.jpeg);
     background-position: 50% 50%;
     background-size: cover;
     height: 600px;
     padding: 0 100px;
+    @media only screen and (max-width: 900px) {
+      display: none;
+    }
   }
   .about-right-one {
     background-color: whitesmoke;
@@ -245,6 +224,7 @@ nav {
     min-height: 600px;
     height: 600px;
     padding: 0 100px;
+
     h2 {
       margin: 5px auto;
       font-size: 42px;
