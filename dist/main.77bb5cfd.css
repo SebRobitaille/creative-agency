@@ -11,6 +11,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 figure,
 blockquote,
@@ -75,7 +77,6 @@ select {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   letter-spacing: -3px;
-  font-size: 2.625rem;
   line-height: 2rem;
 }
 
@@ -83,7 +84,6 @@ select {
   font-family: "Vollkorn", serif;
   font-weight: 500;
   font-style: italic;
-  font-size: 1rem;
   line-height: 1.375rem;
 }
 
@@ -94,9 +94,12 @@ select {
   font-size: 0.75rem;
   text-align: center;
   letter-spacing: -1px;
-  margin-top: 1.875rem;
+  margin: 1.875rem auto;
   padding: 1rem 2rem;
   transition: all 500ms ease;
+  display: block;
+  width: 168px;
+  height: 53px;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -120,6 +123,7 @@ body {
   width: 100%;
   background-color: white;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 p {
@@ -130,32 +134,42 @@ p {
 }
 
 .primary-nav {
-  display: none;
+  display: block;
   transition: transform 0.5s ease;
   width: 100%;
-  height: 500%;
+  height: 600%;
   z-index: 1000;
-}
-.primary-nav.active {
-  display: block;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in;
   position: absolute;
-  background-color: white;
+  top: 0;
 }
-.primary-nav.active ul {
+.primary-nav ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
 }
-.primary-nav.active ul a {
+.primary-nav ul a {
   text-decoration: none;
   color: black;
   margin: 1rem;
 }
-.primary-nav.active ul .logo-link {
+.primary-nav ul .logo-link {
   color: black;
   width: 70px;
+}
+.primary-nav ul .logo-link:active {
+  background-color: lightblue;
+}
+.primary-nav.active {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  transform: translateX(-2%);
 }
 
 .main-header {
@@ -168,6 +182,7 @@ p {
 .main-header .header-container {
   background: url(/hero-background.510a3007.jpg) no-repeat center 0px/cover;
   height: 100%;
+  width: 100%;
 }
 .main-header .header-container .logo-div {
   position: absolute;
@@ -175,8 +190,8 @@ p {
   margin: 20px;
 }
 .main-header .header-container .logo-div img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 .main-header .header-container .header-text {
   color: white;
@@ -193,7 +208,7 @@ p {
   margin-bottom: 1rem;
 }
 .main-header .header-container .header-text h4 {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .main-header .header-container #nav-toggle {
   position: absolute;
@@ -213,20 +228,28 @@ p {
 }
 .about-section .about-card {
   width: 100%;
-  min-height: 500px;
+  min-height: 300px;
   background-color: whitesmoke;
   text-align: center;
+  padding: 2rem auto;
 }
-.about-section .about-1 {
-  padding: 20px;
+.about-section .about-card h2 {
+  line-height: 1.5rem;
+  margin-top: 1rem;
+}
+.about-section .about-card h5 {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+.about-section .about-card p {
+  font-size: 0.8rem;
 }
 .about-section .about-1 p {
-  margin-bottom: 20px;
-  padding: 20px;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 .about-section .about-1 a {
-  margin-top: 40px;
-  padding: 20px;
+  margin: 1rem auto;
 }
 .about-section .about-2 {
   background-image: url(/about-left.2b540c01.jpeg);
