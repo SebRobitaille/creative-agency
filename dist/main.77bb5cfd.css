@@ -95,9 +95,11 @@ select {
   text-align: center;
   letter-spacing: -1px;
   margin: 1.875rem auto;
-  padding: 1rem 2rem;
+  padding: 1em rem;
   transition: all 500ms ease;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 168px;
   height: 53px;
   cursor: pointer;
@@ -175,7 +177,7 @@ p {
 .main-header {
   display: block;
   position: relative;
-  height: 100vh;
+  height: 800px;
   width: 100vw;
   padding: 20px;
 }
@@ -246,26 +248,14 @@ p {
 }
 .about-section .about-1 p {
   padding: 0.5rem;
-  margin: 0.5rem;
-}
-.about-section .about-1 a {
-  margin: 1rem auto;
 }
 .about-section .about-2 {
   background-image: url(/about-left.2b540c01.jpeg);
   background-position: center;
   background-size: cover;
 }
-.about-section .about-3 {
-  padding: 20px;
-}
 .about-section .about-3 p {
-  margin-bottom: 20px;
-  padding: 20px;
-}
-.about-section .about-3 a {
-  margin-top: 40px;
-  padding: 20px;
+  padding: 0.5rem;
 }
 .about-section .about-4 {
   background-image: url(/about-right.8031a3a7.jpeg);
@@ -274,12 +264,8 @@ p {
   height: 200px;
 }
 .about-section .about-5 {
-  margin-top: 1rem;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 .about-section .item {
@@ -290,11 +276,7 @@ p {
   margin: 1rem auto;
   border: 1px solid rgba(0, 0, 0, 0.2);
   width: 100%;
-  padding: 1rem;
-}
-.about-section .item h2 {
-  padding-top: 0.5rem;
-  margin-top: 1rem;
+  padding: 0.2rem;
 }
 
 .services-section {
@@ -304,6 +286,30 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.services-section .services-item {
+  width: 100%;
+  min-height: 300px;
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 2rem 0.5rem;
+  border: 1px dashed black;
+  margin: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.services-section .services-item h2 {
+  line-height: 1.5rem;
+  margin-top: 1rem;
+}
+.services-section .services-item h5 {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+.services-section .services-item p {
+  font-size: 0.8rem;
 }
 .services-section .services-1 {
   background-image: url("/services-1.aac1aba4.jpeg");
@@ -325,18 +331,22 @@ p {
   margin-top: 1rem;
   padding: 2rem auto;
   background-color: whitesmoke;
-  min-height: 450px;
+  min-height: 300px;
 }
-.services-section .services-2 h2 {
-  padding-top: 1rem;
+.services-section .services-2 p {
+  padding: 0.5rem;
 }
-.services-section .services-2 .button {
-  display: block;
-  width: 80%;
-  align-self: center;
-  justify-self: center;
-  text-align: center;
-  margin-bottom: 20px;
+.services-section .services-3:hover,
+.services-section .services-3:focus {
+  background-color: rgb(227, 225, 211);
+}
+.services-section .services-4:hover,
+.services-section .services-4:focus {
+  background-color: #e0cece;
+}
+.services-section .services-5:hover,
+.services-section .services-5:focus {
+  background-color: #d1d7e0;
 }
 
 .quotes-section {
@@ -344,7 +354,8 @@ p {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 100px 20px;
+  padding: 0 20px;
+  background-color: whitesmoke;
 }
 .quotes-section h2 {
   margin: 5px 0;
@@ -357,13 +368,20 @@ p {
 
 .portfolio-section {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 100px 20px;
 }
-.portfolio-section .portfolio-text {
-  margin: 1px;
+.portfolio-section .portfolio-text h2 {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+.portfolio-section .portfolio-text h5 {
+  font-size: 0.8rem;
+}
+.portfolio-section .portfolio-text p {
+  font-size: 0.75rem;
+  line-height: 1;
 }
 .portfolio-section a {
   background-position: center;
@@ -375,26 +393,29 @@ p {
   align-items: center;
   justify-content: center;
 }
+.portfolio-section a h2 {
+  font-size: 1rem;
+}
 .portfolio-section .pf1 {
-  background-image: url(/portfolio1.2afdf596.jpg);
+  background-image: url(/images\portfolio1.jpg);
 }
 .portfolio-section .pf2 {
-  background-image: url(/portfolio2.abeacf05.jpg);
+  background-image: url(/images\portfolio2.jpg);
 }
 .portfolio-section .pf3 {
-  background-image: url(/portfolio3.7f4d3e4c.jpg);
+  background-image: url(/images\portfolio3.jpg);
 }
 .portfolio-section .pf4 {
-  background-image: url(/portfolio4.1cfd72c3.jpg);
+  background-image: url(/images\portfolio4.jpg);
 }
 .portfolio-section .pf5 {
-  background-image: url(/portfolio5.50b48501.jpg);
+  background-image: url(/images\portfolio5.jpg);
 }
 .portfolio-section .pf6 {
-  background-image: url(/portfolio6.f6bf2acd.jpg);
+  background-image: url(/images\portfolio6.jpg);
 }
 .portfolio-section .pf7 {
-  background-image: url(/portfolio7.81a059fe.jpg);
+  background-image: url(/images\portfolio7.jpg);
 }
 .portfolio-section .outer-div {
   display: none;
@@ -433,16 +454,16 @@ p {
 }
 
 .contact-section {
-  padding: 100px 20px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  padding: 20px;
 }
 .contact-section .contact-div {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
