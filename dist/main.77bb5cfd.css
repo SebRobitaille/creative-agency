@@ -123,7 +123,7 @@ html {
 
 body {
   width: 100%;
-  background-color: white;
+  background-color: lightblue;
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -230,7 +230,7 @@ p {
 }
 .about-section .about-card {
   width: 100%;
-  min-height: 300px;
+  min-height: 200px;
   background-color: whitesmoke;
   text-align: center;
   padding: 2rem auto;
@@ -272,11 +272,13 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin: 1rem auto;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  align-items: flex-start;
   width: 100%;
   padding: 0.2rem;
+}
+.about-section .item h2,
+.about-section .item h5 {
+  padding-left: 1rem;
 }
 
 .services-section {
@@ -289,12 +291,10 @@ p {
 }
 .services-section .services-item {
   width: 100%;
-  min-height: 300px;
   background-color: whitesmoke;
   text-align: center;
   padding: 2rem 0.5rem;
-  border: 1px dashed black;
-  margin: 0.5em;
+  margin: 0.5em auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -316,12 +316,9 @@ p {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: whitesmoke;
-  min-height: 200px;
-  max-height: 651px;
-  width: 100%;
-  max-width: 900px;
+  background-color: red;
   margin-bottom: 1rem;
+  height: 200px;
 }
 .services-section .services-2 {
   display: flex;
@@ -330,7 +327,7 @@ p {
   align-items: center;
   margin-top: 1rem;
   padding: 2rem auto;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   min-height: 300px;
 }
 .services-section .services-2 p {
